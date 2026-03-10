@@ -1,22 +1,27 @@
 console.log("conectando");
 
-//1. Portero Digital//
-function porteroDigital() {
-    let edad = parseInt(prompt)("Ingrese su edad:");
-    if (edad >= 18) {
-        alert("Acceso permitido a la App")
-    } else if (edad< 18)
-        alert("Acceso denegado: necesitas ser mayor de edad ");
+//1 Portero Digital//
+function validaredad() {
+    let edad = parseInt(prompt("Ingresar Edad:"));
+    if (edad < 0 && edad >= 130) {
+        alert("Necesitas ser mayor de edad")
     }
+    else if (edad >= 18) {
+        alert("Acesso permitido a la app")
 
-//2. Gestión de Inventarios y Listas//
-function gestiónInvyList() {`
-    let productos = ["celular", "teclado", "mouse"];
-let nuevoProducto = "monitor";  `cambiar` el valor para probar ambos casos`
-if (!productos.includes(nuevoProducto)) {
-    productos.push(nuevoProducto);
-    console.log("Inventario actualizado:", productos);
-} else {
-    console.log("El producto ya está en el inventario");
+         if (edad <= 17 && edad > 0) {
+            alert("Necesitas ser mayor de edad")
+        }
+        else (alert("Ingresa una edad valida"))
+    }
+}
+
+//2 Gestión de Inventarios y Listas//
+function filaEspera() {
+let nombre = prompt("Ingrese su nombre");
+let usuarios=[];
+if (nombre !=="") {
+    usuarios.push(nombre);
+    alert(`Hola ${usuarios}`);
 }
 }
