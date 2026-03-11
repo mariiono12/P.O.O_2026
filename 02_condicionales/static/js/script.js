@@ -76,8 +76,71 @@ function accesoVip() {
 
 //7 Sistema de calificaciones chile (Escala 1 a 7)//
 function calificacionChile() {
-    let nota = parseInt(prompt("Ingrese la nota: "));
-    if (6 >= 7) {
-        alert("Excelent, eximido")
-    }else if (4>= 5.9)
+    let nota = parseFloat(prompt("Ingrese la nota: "));
+    if (nota >= 6 && nota <= 7) {
+        alert("Excelente, eximido")
+    } else if (nota >= 4.1 && nota <= 5.9) {
+        alert("Aprobado, vas a examen")
+    } else if (nota < 4 && nota >= 1) {
+        alert("Reprobado")
+    } else {
+        alert("Ingrese un valor valido")
+
+    }
 }
+
+
+//8 Buscador de invitados//
+function invitados() {
+    let invitados = ["Ana", "Luis", "Camila", "Diego"];
+    let personas = prompt("Ingrese su nombre: ");
+    if (invitados.incluides(personas)) {
+        alert(`Bienvenido/a ${personas}! Pasa a la fiesta`);
+    } else {
+        alert("Lo siento, no estás en la lista de invitados");
+    }
+}
+
+//9 El Almacén de Matrices (2D Arrays)//
+function almacenamientoMatrices() {
+    let estanteria = [["Manzanas", "Peras"], ["leche", "Yogur"]];
+    let seccion = prompt("ingresar una seccion(0-1)");
+    let productos = prompt("ingresar producto solicitado");
+    if (seccion !== 0 || seccion !== 1)
+        alert("No tenemos esta seccion")
+    {
+        if (estanteria[seccion].includes(productos)) {
+            alert("Producto encontrado en el estante")
+        } else {
+            alert("No tenemos ese producto en esa seccion")
+        }
+    }
+}
+
+//10 Registro Maestro de Visitas//
+let bitacora = [];
+function registroMaestro() {
+    let nombreVisita = prompt("Ingrese tu nombre: ");
+    let esVip = parseInt(prompt(`¿Eres VIP\n0 = no\n1 = si`));
+    nombreVisita = nombreVisita.trim(); // Elimina los espacios del inicio y final
+
+    if (nombreVisita == "") {
+        alert("Error: el nombre no puede estar vacio.")
+    } else if (bitacora.includes(nombreVisita)) { // Verifica que el nombre no está repetido
+        alert("Esa persona ya está en la lista.");
+    } else if (esVip == 1) {
+        bitacora.unshift(nombreVisita);
+        alert(`Agregado correctamente a la lista:\n${bitacora.join(", ")}\nPersona en total:
+                $(bitacora-length}`);
+    } else if (esVip == 0) {
+        bitacora.push(nombreVisita);
+        alert(`Agregado correctamente a la lista:\n$(bitacora.join(", ")}\nPersonas en total:
+                        ${bitacora.length}`);
+    } else if (esVip == 0) {
+        bitacora.push(nombreVisita);
+        alert(`Agregado correctamente a la lista:n${bitacora.join(", ")}\nPersonas en total:
+                            ${bitacora.length}`);
+    } else {
+        alert("Ingrese valores válidos.");
+    }
+    }
