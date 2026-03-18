@@ -7,7 +7,7 @@
     <!-- Autor del documento -->
     <meta name="author" content="sergiobustos@liceovvh.cl">
     <!-- Título del documento -->
-    <title> Condicionales y compuertas lógicas</title>
+    <title> Bucle For</title>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="static/css/style.css">
     <!-- Bootstrap -->
@@ -47,10 +47,10 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 1</h5>
-                <p class="card-text"></p>
+                <p class="card-text">Lista de Asistencia(push)</p>
                 <input type="text" class="form-control" id="input1" placeholder="ingresa tu nombre">
                 <a href="#" class="btn btn-primary" onclick="registrarAlumno()">Ejecutar</a>
-                <div id="resultadoContainer" class="d-none">
+                <div id="container1" class="d-none">
                     <h5>Resultado:</h5>
                     <div id="resultado1" class="alert alert-success fw-bold">
 
@@ -62,12 +62,12 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 2</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary" onclick="asistenciaAutomatica()">Ejecutar</a>
-                <div id="container2" class="d-none">
+                <p class="card-text">Fila de Urgencias Médicas (unshift e if)</p>
+                <input type="text" class="form-control mb-3" id="input2" placeholder="Ingresa la urgencia . . .">
+                <a href="#" class="btn btn-primary" onclick="ingresarUrgencia()">Ejecutar</a>
+                <div id="resultadoContainer2" class="d-none">
                     <h5>Resultado:</h5>
                     <div id="resultado2" class="alert alert-success fw-bold">
-
                     </div>
                 </div>
             </div>
@@ -76,22 +76,22 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 3</h5>
-                <p class="card-text">Buscador de Aprobados (Escala 1 a 7)</p>
-                <a href="#" class="btn btn-primary" onclick="buscadorApoderados()">Ejecutar</a>
-                <div id="Container3" class="d-none">
+                <p class="card-text">Lista de Asistencia(push)</p>
+                <input type="text" class="form-control mb-3" id="input3" placeholder="ingresa tu nombre">
+                <a href="#" class="btn btn-primary" onclick="registrarAlumno()">Ejecutar</a>
+                <div id="container3" class="d-none">
                     <h5>Resultado:</h5>
                     <div id="resultado3" class="alert alert-success fw-bold">
-
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 4</h5>
-                <p class="card-text">El Filtro de Inventario</p>
-                <a href="#" class="btn btn-primary" onclick="controlStock()">Ejecutar</a>
+                <p class="card-text">Lista de Asistencia(push)</p>
+                <input type="text" class="form-control" id="input4" placeholder="ingresa tu nombre">
+                <a href="#" class="btn btn-primary" onclick="registrarAlumno()">Ejecutar</a>
                 <div id="container4" class="d-none">
                     <h5>Resultado:</h5>
                     <div id="resultado4" class="alert alert-success fw-bold">
@@ -100,43 +100,43 @@
                 </div>
             </div>
         </div>
-
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 5</h5>
-                <p class="card-text">Sumando la Colecta</p>
-                <a href="#" class="btn btn-primary" onclick="operarIntruso()">Ejecutar</a>
-                <div id="Container5" class="d-none">
+                <p class="card-text">Lista de Asistencia(push)</p>
+                <input type="text" class="form-control" id="input5" placeholder="ingresa tu nombre">
+                <a href="#" class="btn btn-primary" onclick="registrarAlumno()">Ejecutar</a>
+                <div id="container1" class="d-none">
                     <h5>Resultado:</h5>
-                    <div id="resultado5" class="alert alert-success fw-bold">
+                    <div id="resultado1" class="alert alert-success fw-bold">
 
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 6</h5>
-                <p class="card-text"> Formateador de Nombres VIP</p>
-                <a href="#" class="btn btn-primary" onclick="formateadorVip()">Ejecutar</a>
-                <div id="container6" class="d-none">
+                <p class="card-text">Lista de Asistencia(push)</p>
+                <input type="text" class="form-control" id="input6" placeholder="ingresa tu nombre">
+                <a href="#" class="btn btn-primary" onclick="registrarAlumno()">Ejecutar</a>
+                <div id="container1" class="d-none">
                     <h5>Resultado:</h5>
-                    <div id="resultado6" class="alert alert-success fw-bold">
+                    <div id="resultado1" class="alert alert-success fw-bold">
 
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 7</h5>
-                <p class="card-text"> El Buscador de Stock Específico</p>
-                <a href="#" class="btn btn-primary" onclick="buscadorStock()">Ejecutar</a>
-                <div id="Container7" class="d-none">
+                <p class="card-text">Lista de Asistencia(push)</p>
+                <input type="text" class="form-control" id="input7" placeholder="ingresa tu nombre">
+                <a href="#" class="btn btn-primary" onclick="registrarAlumno()">Ejecutar</a>
+                <div id="container1" class="d-none">
                     <h5>Resultado:</h5>
-                    <div id="resultado7" class="alert alert-success fw-bold">
+                    <div id="resultado1" class="alert alert-success fw-bold">
 
                     </div>
                 </div>
@@ -145,11 +145,12 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Ejercicio 8</h5>
-                <p class="card-text"> Generador de Párrafos de Advertencia</p>
-                <a href="#" class="btn btn-primary" onclick="párrafoAdvertencia()">Ejecutar</a>
-                <div id="container8" class="d-none">
+                <p class="card-text">Lista de Asistencia(push)</p>
+                <input type="text" class="form-control" id="input8" placeholder="ingresa tu nombre">
+                <a href="#" class="btn btn-primary" onclick="registrarAlumno()">Ejecutar</a>
+                <div id="container1" class="d-none">
                     <h5>Resultado:</h5>
-                    <div id="resultado8" class="alert alert-success fw-bold">
+                    <div id="resultado1" class="alert alert-success fw-bold">
 
                     </div>
                 </div>
