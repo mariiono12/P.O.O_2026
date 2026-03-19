@@ -40,3 +40,27 @@ function ingresarUrgencia() {
         alert("El nombre no puede estar vacío . . .");
     }
 };
+
+//*
+
+let entregas = ["Pizza", "Sushi", "Hamburguesa", "Ensalada"];
+function actualizarPedidos(pedido) {
+    if (pedido == "despachar") {
+        entregas.shift()
+    } else if (pedido == "cancelar") {
+        entregas.pop()
+    } else {
+        alert("Ingrese un valor válido")
+    }
+    return `Pedidos pendientes: ${entregas.join(", ")}`
+};
+
+function gestionarPedidos() {
+    const container = document.getElementById("resultadoContainer3");
+    const result = document.getElementById("resultado3");
+    const input = document.getElementById("input3").value;
+    let resultado = actualizarPedidos(input);
+    result.textContent = resultado;
+    input.value = "";
+    container.classList.remove("d-none");
+};
