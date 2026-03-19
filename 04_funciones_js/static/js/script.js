@@ -1,3 +1,4 @@
+
 console.log("conectando");
 
 let asistencia = [];
@@ -17,9 +18,8 @@ function registrarAlumno() {
     result.textContent = resultado;
     input.value = "";
     container.classList.remove("d-none");
-}
+};
 
-//* 
 let pacientes = ["Carlos", "María", "Diego"];
 function agregarUrgencia(nombre) {
     pacientes.unshift(nombre);
@@ -41,7 +41,6 @@ function ingresarUrgencia() {
     }
 };
 
-//*
 
 let entregas = ["Pizza", "Sushi", "Hamburguesa", "Ensalada"];
 function actualizarPedidos(pedido) {
@@ -64,3 +63,37 @@ function gestionarPedidos() {
     input.value = "";
     container.classList.remove("d-none");
 };
+
+let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
+
+function buscarCodigo(codigo) {
+    let mensaje = "Código inválido o expirado";
+    for (let i = 0; i < codigosValidos.length; i++) {
+        if (codigo == codigosValidos[i]) {
+
+            mensaje = "¡Éxito! Código aceptado"
+       return "¡Éxito! Código aceptado";
+        } else {
+            mensaje = ("Ingresa un Código válido")
+
+        }
+    }
+    return mensaje
+}
+
+function verificarCodigo(){
+    let input = document.getElementById("input4");
+    let codigo = input.value;
+    const result = document.getElementById("result4")
+    const container = document.getElementById("container4");
+    let resultado = buscarCodigo(codigo);
+    result.textContent = resultado;
+    input.value = "";
+    container.classList.remove()
+}
+
+function simularCuotas() {
+    const producto = document.getElementById("input5")
+}
+
+
