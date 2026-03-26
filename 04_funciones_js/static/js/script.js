@@ -1,6 +1,4 @@
 
-console.log("conectando");
-
 let asistencia = [];
 function agregarLista(nombre) {
     asistencia.push(nombre);
@@ -8,28 +6,32 @@ function agregarLista(nombre) {
 
 }
 function registrarAlumno() {
-
     const container = document.getElementById("container1");
-    const result = document.getElementById("resultado1");
+    const result = document.getElementById("result1");
     const input = document.getElementById("input1");
     let nombre = input.value;
-    // input = parseInt(input); ---> Transformar a número
-    let resultado = agregarLista(nombre); //Llamado a la función con envío de parámetros
-    result.textContent = resultado;
+    let resultado = agregarLista(nombre);
+    result.textContent = resultado;// llamado a la funcion con envio de parametro 
     input.value = "";
     container.classList.remove("d-none");
-};
+}
+
+
+
+
+
+
 
 let pacientes = ["Carlos", "María", "Diego"];
 function agregarUrgencia(nombre) {
     pacientes.unshift(nombre);
     return pacientes.join(", ");
-};
-
-function ingresarUrgencia() {
-    const container = document.getElementById("resultadoContainer2");
-    const result = document.getElementById("resultado2");
+}
+function agregarUrgencia() {
+    const container = document.getElementById("container2")
+    const result = document.getElementById("result2")
     const input = document.getElementById("input2");
+    //input = parseInt(input); --> transformar a numero  
     if (input.value !== "") {
         let nombre = input.value;
         let resultado = agregarUrgencia(nombre);
@@ -37,47 +39,52 @@ function ingresarUrgencia() {
         input.value = "";
         container.classList.remove("d-none");
     } else {
-        alert("El nombre no puede estar vacío . . .");
+        alert("El nombre no puede estar vacio ")
     }
-};
+
+}
 
 
 let entregas = ["Pizza", "Sushi", "Hamburguesa", "Ensalada"];
+
 function actualizarPedidos(pedido) {
     if (pedido == "despachar") {
         entregas.shift()
     } else if (pedido == "cancelar") {
         entregas.pop()
     } else {
-        alert("Ingrese un valor válido")
+        alert("Ingresar un valor valido")
     }
     return `Pedidos pendientes: ${entregas.join(", ")}`
-};
+}
 
 function gestionarPedidos() {
-    const container = document.getElementById("resultadoContainer3");
-    const result = document.getElementById("resultado3");
-    const input = document.getElementById("input3").value;
+    const container = document.getElementById("container3")
+    const result = document.getElementById("result3")
+    const texto = document.getElementById("input3");
+    let input = texto.value.toLowerCase();
     let resultado = actualizarPedidos(input);
     result.textContent = resultado;
-    input.value = "";
+    texto.value = "";
     container.classList.remove("d-none");
-};
+}
+
+
+
 
 let codigosValidos = ["VERANO2026", "PROMO50", "CLIENTEVIP"];
-function buscarCodigo(codigo) {
-    let mensaje = "Código inválido o expirado";
+function buscarCodigpo(codigo) {
+    let mensaje = "Codigo invalido o expírado";
     for (let i = 0; i < codigosValidos.length; i++) {
-        if (codigo == codigosValidos[i]) {
-            mensaje = "!Éxito¡ Código aceptado."
-            return "!Éxito¡ Código aceptado"
+        if (codigo === codigosValidos[i]) {
+            mensaje = "Exito codigo aceptado";
+            return "Exito codigo aceptado";
         } else {
-            mensaje = ("Ingresa un código válido")
+            mensaje = "Ingresar un codigo valido";
         }
     }
-    return mensaje;
-};
-
+    return mensaje
+}
 function verificarCodigo() {
     let input = document.getElementById("input4");
     let codigo = input.value;
@@ -86,62 +93,5 @@ function verificarCodigo() {
     let resultado = buscarCodigo(codigo);
     result.textContent = resultado;
     input.value = "";
-    container.classList.remove()
+    container.classList.remove("d-none");
 }
-
-
-function calcularCuotas(valor, cuota) {
-    let registroPagos = "";
-    for (let i = 1; i <= 3; i++) {
-        registroPagos += `Cuota ${i} de ${cuota}: ${parseInt(valor / 3)} |`;
-    }
-    return registroPagos;
-};
-
-function simularCuotas() {
-    const producto = document.getElementById("input5_1");
-    let valorProducto = parseInt(producto.value);
-    const cuotaInput = document.getElementById("input5_2");
-    let cuota = parseInt(cuotaInput.value);
-    const result = document.getElementById("result5");
-    const container = document.getElementById("container5");
-    let resultado = calcularCuotas(valorProducto, cuota)
-    result.textContent = resultado;
-    producto.value = "";
-    cuotaInput.value = "";
-    container.classList.remove("d-none")
-
-}
-
-let vitrina = [2500, 15000, 8000, 30000, 5000];
-let opciones = [];
-function comprobarPresupuesto(presupuesto) {
-    for (let i = 0; i <= vitrina.length; i++) {
-        if (presupuesto >= vitrina[i]) {
-            opciones.push(vitrina[i]);
-        };
-    }
-    if (opciones == "") {
-        return "No te alcanza para nada"
-    } else {
-        return `Te alcanza para los precios: ${opciones.join(" - ")}`;
-    }
-}
-
-function ejercicio_6() {
-    let input = document.getElementById("input6");
-    const result = document.getElementById("result6");
-    const container = document.getElementById("container6");
-    let dinero = parseInt(input.value);
-    if (isNaN(dinero)) {
-        alert("Ingresa valores válidos");
-    } else {
-        let resultado = comprobarPresupuesto(dinero);
-        result.textContent = resultado;
-        input.value = "";
-        container.classList.remove("d-none")
-        opciones = [];
-    }
-
-}
-
